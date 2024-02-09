@@ -26,6 +26,10 @@
             <li>Shafayet</li>
             <li>bobobash</li>
         </ul>
+        <ul>
+            <li>cg low</li>
+            <li>cg high</li>
+        </ul>
     </main>
 
     <!-- external script -->
@@ -33,7 +37,20 @@
 
     <!-- internal script -->
     <script>
-        console.log('adding JS inside the html file')
+        const student = {
+            name: 'ABUL',
+            ID: 11,
+            study: function(time) {
+                console.log(time, 'study ketese');
+            }
+        }
+
+        const liCollection = document.getElementsByTagName('li');
+
+        for(const li of liCollection) {
+            console.log(li);
+            console.log(li.innerText);
+        }
     </script>
 </body>
 </html>
