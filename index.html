@@ -37,6 +37,16 @@
                 <li>cg high</li>
             </ul>
         </section>
+
+        <section class="fruits">
+            <h2>Tasty Fruits</h2>
+            <ul>
+                <li>Orange</li>
+                <li>Jack Fruits</li>
+                <li>Lichi</li>
+                <li>Coconut</li>
+            </ul>
+        </section>
     </main>
 
     <!-- external script -->
@@ -52,6 +62,7 @@
             }
         }
 
+        // getElementsByTagName
         const liCollection = document.getElementsByTagName('li');
 
         for(const li of liCollection) {
@@ -59,19 +70,55 @@
             console.log(li.innerText);
         }
 
-        // getElementById
+        // getElementById --> its a single element
         console.log(document.getElementById('result'))
         console.log(document.getElementById('result').innerText)
 
-        // getElementsByClassName
+
+        // getElementsByClassName --> its an array like object
         console.log(document.getElementsByClassName('dom'))
         const places = document.getElementsByClassName('dom');
 
-        console.log(places[0].innerText, '\n')
+        console.log(places[0].innerText)
         for(const place of places) {
             console.log(place.innerHTML)
         }
-        
+
+
+        /**
+        ==> querySelectorAll('#id')
+        ==> querySelectorAll('.className')
+        ==> it works as css selector method
+
+        ==> we get a NodeList
+        */
+        const someLi = document.querySelectorAll('.fruits li')
+        console.log(someLi)
+        for(const fruit of someLi) {
+            console.log(fruit.innerHTML)
+        }
+
+        /**
+        ==> to get only first one(node) of NodeList: querySelector('')
+        */
+        const singleLi = document.querySelector('.fruits li')
+        console.log(singleLi);
+
+
+        /** 
+        ==> getElements ---> plural ---> its an array like object
+        ==> it can return an empty array also
+        */
+
+
+        /**
+        ------ NodeList vs HTMLCollection ------
+        1.  - static (nodelist)
+            - live or dynamic (htmlcollection)
+
+        2.  - forEach allowed (nodelist)
+            - forEach not allowed (htmlcollection)
+        */
     </script>
 </body>
 </html>
