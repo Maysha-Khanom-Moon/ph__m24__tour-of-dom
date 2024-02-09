@@ -20,3 +20,26 @@
 - js can remove existing html elements and attributes
 - js can add new html elements and attributes
 - js can react to all existing html events in the page
+
+
+## dom html-selectors
+1. document.getElementsByTagName('tag')
+2. document.getElementById('id')
+3. document.getElementByClassName('class')
+4. document.querySelectorAll('#id' / '.class')
+4. document.querySelector('#id' / '.class') ---> single node(first one)
+
+
+## NodeList vs HTMLCollection
+- NodeList: from querySelectorAll
+- HTMLCollection: getElements
+
+1. 
+    - htmlcollection: only contains element nodes
+    - nodelist: contains element, attribute, text nodes
+2. 
+    - htmlcollection: accessed by name attribute, id attribute or index
+    - nodelist: accessed by only index
+3. 
+    - htmlcollection: live or dynamic --> for/of
+    - nodelist: static --> forEach
