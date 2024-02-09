@@ -43,3 +43,22 @@
 3. 
     - htmlcollection: live or dynamic --> for/of
     - nodelist: static --> forEach
+
+
+
+## style by dom
+- case:
+    - css: snake case
+    - js: camel case
+
+- #### only possible via single selector
+    - document.getElementById('id').style.property='value'
+    - document.querySelector('id').style.color='blue'
+    - document.getElementByClassName[0].innerHTML = '<h1>WOW</h1>'
+    - it works for existing style properties
+    <br>
+    - getAttribute('name')
+    - setAttribute('name', 'value');
+    <br>
+    - innerText: only text part
+    - innerHTML: total html part from inside the box
