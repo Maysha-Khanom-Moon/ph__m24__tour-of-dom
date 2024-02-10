@@ -2,7 +2,7 @@
 - document object model
     - it's like a tree
     - every joint point is node
-        - node: object ---> element's tag
+        - node: object ---> an html element
         - there is parent nodes and child nodes
 
 
